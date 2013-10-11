@@ -36,6 +36,9 @@ under the License.-->
         <script src="js/app/notifications.js"></script>
         <script src="js/app/device.js"></script>
         <script src="js/app/connection.js"></script>
+        <script src="js/app/camera.js"></script>
+        <script src="js/app/dataJson.js"></script>
+        
         <script src="js/index.js"></script>
         <title>Hello World</title>
     </head>
@@ -75,6 +78,11 @@ under the License.-->
                 <li>
                     <a href="#storage-view">Storage</a>
                 </li>
+                
+                <li>
+						<a href="#restaurants-view">Restaurants</a>
+				</li>
+                
             </ul>
         </div>
 
@@ -144,8 +152,45 @@ under the License.-->
                 </tr>
             </table>
         </div>
-        <div id="capture-view" data-id="capture-view" data-role="view" data-layout="api-layout" data-title="Capture API">
+        
+         <div id="camera" data-id="camera" data-role="view" data-title="Camera" data-layout="api-layout">
+            <button data-role="button" id="take-picture-btn">Take Pic</button>
+            <img id="camera-image-frame" width="100" height="100"/>
         </div>
+        <div id="capture-view" data-id="capture" data-role="view" data-title="Capture" data-layout="api-layout">
+            <button data-role="button" id="capture-btn">Capture Image</button>
+            <img id="capture-image-frame" width="100" height="100"/>
+        </div>
+        <div id="events" data-id="events" data-role="view" data-title="Events" data-layout="api-layout">
+            <p>
+                You will see event fired by connecting to the internet or disconnecting.
+            </p>
+            <p style="font-size:1.5em" id="events-indicator"></p>
+        </div>
+        
+        
+        <!--Dobavki.............-->
+	
+		<div data-role="view" id="restaurants-view" data-id="restaurants-view" data-add-back-btn="true" data-title="Restaurants" data-layout="api-layout">
+			<ul data-role="listview">
+				<h5>
+					Loading ...
+				</h5>
+			</ul>
+		</div>
+        
+        
+        
+        
+        
+        <!--End of Dobavki.............-->
+        
+        
+       <div id="capture-view" data-id="capture-view" data-role="view" data-layout="api-layout" data-title="Capture API">
+        </div>
+        
+        
+        
         <div id="connection-view" data-id="connection-view" data-role="view" data-layout="api-layout" data-title="Connection API"
             data-show="app.connectionApi.init" data-hide="app.connectionApi.close">
             <h1 data-bind="text: state"></h1>
@@ -159,12 +204,31 @@ under the License.-->
         <div id="events-view" data-id="events-view" data-role="view" data-layout="api-layout" data-title="Events API">
         </div>
         <div id="file-system-view" data-id="file-system-view" data-role="view" data-layout="api-layout" data-title="File system API">
+            
+            <div class="content">
+            <div style="margin:10px 5px;">Clicking the button downloads an image from the Icenium site and saves it on the device.</div>
+            <div class="action-area ch30">
+                <button class="button dh" id="download">Download</button>
+            </div>
+			<div class="result-area ch70">
+                <div class="results">
+                    <div id="result" class="desc"></div>
+                    <img id="downloadedImage"/>
+                </div>
+                <div class="separator"></div>
+            </div>
+		</div>
+            
+            
+            
         </div>
         <div id="globalization-view" data-id="globalization-view" data-role="view" data-layout="api-layout" data-title="Globalization API">
         </div>
         <div id="InAppBrowser-view" data-id="InAppBrowser-view" data-role="view" data-layout="api-layout" data-title="InAppBrowser API">
         </div>
         <div id="media-view" data-id="media-view" data-role="view" data-layout="api-layout" data-title="Media API">
+            
+            
         </div>
         <div id="storage-view" data-id="storage-view" data-role="view" data-layout="api-layout" data-title="Storage API">
         </div>

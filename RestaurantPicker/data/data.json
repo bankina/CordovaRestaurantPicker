@@ -1,0 +1,11 @@
+[
+ { "rank": 14,"country": "Albania","restautant" : "Pizza Hut","height" : 2764},
+ { "rank": 10,"country": "Andorra","restautant" : "Happy Bar&Grill","height" : 2942},
+ { "rank": 6,"country": "Armenia","restautant" : "Kabana","height" : 4090},
+ { "rank": 7,"country": "Austria","restautant" : "White Restaurant","height" : 3798},
+ { "rank": 5,"country": "Azerbaijan","restautant" : "Rock It","height" : 4466},
+ { "rank":"39","country": "Belarus","restautant" : "Papa Joe","height" : 345 },
+ { "rank":"36","country": "Belgium","restautant" : "Stepen Wolf","height" : 694 },
+ { "rank":"23","country": "Bosnia","restautant" : "Culture Beat","height" : 2386},
+ { "rank":"11","country": "Bulgaria","restautant" : "Don Domat","height" : 2925}
+]
