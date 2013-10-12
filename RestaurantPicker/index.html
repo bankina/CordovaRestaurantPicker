@@ -38,6 +38,9 @@ under the License.-->
         <script src="js/app/connection.js"></script>
         <script src="js/app/camera.js"></script>
         <script src="js/app/dataJson.js"></script>
+        <script src="js/app/downloadAndSavePics.js"></script>
+        <script src="js/app/geolocation.js"></script>
+        
         
         <script src="js/index.js"></script>
         <title>Hello World</title>
@@ -82,7 +85,9 @@ under the License.-->
                 <li>
 						<a href="#restaurants-view">Restaurants</a>
 				</li>
-                
+                <li>
+                    <a href="#geolocation-view">Geolocation</a>
+                </li>
             </ul>
         </div>
 
@@ -178,6 +183,21 @@ under the License.-->
 				</h5>
 			</ul>
 		</div>
+        
+        <div data-role="view" id="geolocation-view" data-id="geolocation-view" data-add-back-btn="true" data-title="Geolocation" data-layout="api-layout">
+            <div class="content">
+                <div class="action-area ch30">
+                    <button class="button dh" id="watchButton">Start Geolocation Watch</button>
+    			    <button class="button dh" id="refreshButton">Refresh Geolocation</button>
+                </div>
+    			<div class="result-area ch70">
+                    <div class="results">
+                        <div id="results" class="desc"></div>
+                    </div>
+                    <div class="separator"></div>
+                </div>
+    		</div>
+        </div>
         
         
         
