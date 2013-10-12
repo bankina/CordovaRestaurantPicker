@@ -40,7 +40,7 @@ under the License.-->
         <script src="js/app/dataJson.js"></script>
         <script src="js/app/downloadAndSavePics.js"></script>
         <script src="js/app/geolocation.js"></script>
-        
+        <script src="js/app/addRestaurant.js"></script>
         
         <script src="js/index.js"></script>
         <title>Hello World</title>
@@ -88,6 +88,8 @@ under the License.-->
                 <li>
                     <a href="#geolocation-view">Geolocation</a>
                 </li>
+               
+                
             </ul>
         </div>
 
@@ -173,15 +175,27 @@ under the License.-->
             <p style="font-size:1.5em" id="events-indicator"></p>
         </div>
         
+        <div data-role="view" id="restaurants-view" data-id="restaurants-view" data-add-back-btn="true" data-title="Restaurants" data-layout="api-layout">
+    <a class="button" data-role="button" href="#add-restaurant-view">Add Restaurant</a>
+        <ul data-role="listview" id="links">
+        <img id="restaurant-pic"/>
+            <h5>
+            	Loading ...
+            </h5>
+        </ul>
+</div>
+
         
         <!--Dobavki.............-->
 	
-		<div data-role="view" id="restaurants-view" data-id="restaurants-view" data-add-back-btn="true" data-title="Restaurants" data-layout="api-layout">
-			<ul data-role="listview">
-				<h5>
-					Loading ...
-				</h5>
-			</ul>
+		
+        <div data-role="view" id="add-restaurant-view" data-id="add-restaurant-view" data-add-back-btn="true" data-title="Add Restaurants" data-layout="api-layout">
+			<label for="rest-name">Restaurant name</label>   
+            <input id="rest-name" type="text"/>
+            <label for="rest-address">Address</label>   
+            <input id="rest-address" type="text"/>
+            <input type="file" />
+            <a id="add-restaurant-btn" class="button" data-role="button">Add Restaurant</a>
 		</div>
         
         <div data-role="view" id="geolocation-view" data-id="geolocation-view" data-add-back-btn="true" data-title="Geolocation" data-layout="api-layout">
